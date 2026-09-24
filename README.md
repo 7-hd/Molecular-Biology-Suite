@@ -1,2 +1,5 @@
-# Molecular-Biology-Suite
-Tool for various molecular biology applications -  ALL IN ONE suite
+"""Compatibility layer for restriction analysis functionality."""
+
+from structure import RestrictionMapper
+
+__all__ = ["RestrictionMapper"]
