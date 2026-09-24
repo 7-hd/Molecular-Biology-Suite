@@ -8,12 +8,10 @@ version = "0.1.0"
 description = "Refactored bioinformatics suite for primer design, CRISPR, restriction mapping, phylogenetics, and vaccine analysis."
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = [
-  "rich>=13.7.0",
-]
+dependencies = ["rich>=13.7.0"]
 
 [project.scripts]
 molecular-biology-suite = "app.cli:main"
 
-[tool.setuptools]
-packages = ["app", "core"]
+[tool.setuptools.packages.find]
+include = ["app*", "biology*", "core*"]

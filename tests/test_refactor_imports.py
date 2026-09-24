@@ -1,5 +1,8 @@
-from core.sequence import clean_sequence, gc_content, reverse_complement, translate, validate_sequence
+"""Regression tests for the refactored package surface."""
+
 from app.cli import main
+from biology import PrimerDesigner, RestrictionMapper
+from core.sequence import clean_sequence, gc_content, reverse_complement, translate, validate_sequence
 
 
 def test_core_sequence_helpers():
@@ -11,5 +14,7 @@ def test_core_sequence_helpers():
     assert validate_sequence(seq) == seq
 
 
-def test_cli_entrypoint_is_defined():
+def test_public_package_imports():
     assert callable(main)
+    assert PrimerDesigner is not None
+    assert RestrictionMapper("GAATTCAAA").find_sites(["EcoRI"])["EcoRI"]["positions"] == [1]
