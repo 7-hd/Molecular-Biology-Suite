@@ -1,4 +1,4 @@
-"""Regression tests for the refactored package surface."""
+"""Regression tests for the refactored public package surface."""
 
 from app.cli import main
 from biology import PrimerDesigner, RestrictionMapper
@@ -18,3 +18,11 @@ def test_public_package_imports():
     assert callable(main)
     assert PrimerDesigner is not None
     assert RestrictionMapper("GAATTCAAA").find_sites(["EcoRI"])["EcoRI"]["positions"] == [1]
+
+
+def test_primer_designer_rejects_invalid_bounds():
+    try:
+        PrimerDesigner("A" * 40, min_len=25, max_len=18)
+    except ValueError:
+        return
+    raise AssertionError("invalid primer bounds should raise ValueError")

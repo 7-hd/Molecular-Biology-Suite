@@ -1,9 +1,4 @@
-"""Public biology API.
-
-The domain modules currently wrap the legacy implementations while the
-migration proceeds incrementally. Consumers can import from this package
-without depending on the monolithic module's internal layout.
-"""
+"""Public biology API."""
 
 from .codon import CodonOptimizer
 from .crispr import CRISPRAnimator, CRISPRDesigner
