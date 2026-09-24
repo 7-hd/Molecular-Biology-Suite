@@ -1,27 +1,5 @@
-"""Core utilities package for the Molecular Biology Suite."""
+"""ARG-scanning compatibility module."""
 
-from .sequence import (
-    AMBIGUOUS_MAP,
-    GENETIC_CODE,
-    clean_sequence,
-    complement,
-    dna_to_rna,
-    gc_content,
-    reverse_complement,
-    rna_complement,
-    translate,
-    validate_sequence,
-)
+from structure import ARGScanner
 
-__all__ = [
-    "AMBIGUOUS_MAP",
-    "GENETIC_CODE",
-    "clean_sequence",
-    "complement",
-    "dna_to_rna",
-    "gc_content",
-    "reverse_complement",
-    "rna_complement",
-    "translate",
-    "validate_sequence",
-]
+__all__ = ["ARGScanner"]

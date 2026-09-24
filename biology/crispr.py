@@ -1,4 +1,4 @@
-"""Compatibility layer for primer design functionality."""
+"""Primer-design compatibility module."""
 
 from structure import PrimerDesigner
 

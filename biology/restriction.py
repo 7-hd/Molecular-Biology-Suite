@@ -1,4 +1,4 @@
-"""Compatibility layer for CRISPR functionality."""
+"""CRISPR compatibility module."""
 
 from structure import CRISPRAnimator, CRISPRDesigner
 
